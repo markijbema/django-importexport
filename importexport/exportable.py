@@ -23,11 +23,17 @@ class Exportable():
         return []
 
 
+    def export_self(self):
+    	"""
+    	This function exports the object itself, useful to override in case of inheritance
+    	"""
+    	return [self]
+
     def export(self):
         return (
         	export_all(self.export_before())
             +
-            [self]
+            self.export_self()
             +
         	export_all(self.export_content())
         	+
