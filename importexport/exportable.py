@@ -1,6 +1,6 @@
 import itertools
 
-def export_all(exports)
+def export_all(exports):
 	return list(itertools.chain(*[obj.export() for obj in exports]))
 
 class Exportable():
