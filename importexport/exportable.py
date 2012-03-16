@@ -29,5 +29,7 @@ class Exportable():
             +
             [self]
             +
-        	export_all(self.export_content() + self.export_after())
+        	export_all(self.export_content())
+        	+
+        	export_all(self.export_after())
         )
